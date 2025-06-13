@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
-  A Kubernetes CronJob was implemented to identify and purge stale deployments or workloads by analyzing ingress metrics from Prometheus over a specified interval to determine if the workload was idle or unused. The application compiled a list of idle workloads and forwarded it to a database or an object storage service for reporting or automated deletion.
+  A Kubernetes CronJob implemented to identify and purge stale deployments or workloads by analyzing ingress metrics from Prometheus over a specified interval to determine if the workload was idle or unused. The application compiled a list of idle workloads and forwarded it to a database or an object storage service for reporting or automated deletion.
 </h4>
 
 <div align="center">
