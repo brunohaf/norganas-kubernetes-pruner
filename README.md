@@ -55,7 +55,7 @@ The <strong>Norganas' Helm of Oblivion</strong> channels the cryptic power of No
 
 ## How To Use
 
-1. Setup the specifications at [config.json](src/configs/configs.json) and [values.yaml](charts/helm-idle-cleanup-cronjob/values.yaml).
+1. Setup the specifications at [config.json](src/configs/configs.json) and [values.yaml](charts/norganas-helm-oblivion/values.yaml).
 2. Deploy the **norganas-helm-of-oblivion** cronjob in your Kubernetes cluster.  
 3. Ensure Prometheus is scraping the ingress controller metrics correctly.  
 4. Configure the Azure File Share secrets and access for uploading release lists and logs.  

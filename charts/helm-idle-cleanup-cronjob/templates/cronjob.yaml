@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: helm-idle-cleanup-cronjob
+  name: norganas-helm-oblivion
   labels:     
     team: {{ .Values.team }}
 
@@ -30,7 +30,7 @@ spec:
               command:
                 - "python"
               args:
-                - "src/helm_idle_cleaner.py"
+                - "src/main.py"
           volumes:
             - name: config
               configMap:

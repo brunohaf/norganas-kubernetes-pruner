@@ -32,4 +32,4 @@ ENV PATH="/.venv/bin:$PATH"
 WORKDIR /app
 COPY . /app
 
-CMD ["python", "src/helm_idle_cleaner.py"]
+CMD ["python", "src/main.py"]

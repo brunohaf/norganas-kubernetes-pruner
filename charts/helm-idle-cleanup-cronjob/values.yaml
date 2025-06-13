@@ -1,6 +1,6 @@
 image:
-  fullnameOverride: helm-idle-cleanup-cronjob
-  repository: helm-idle-cleanup-cronjob
+  fullnameOverride: norganas-helm-oblivion
+  repository: norganas-helm-oblivion
   tag: #{Build.BuildId}#
   pullPolicy: IfNotPresent
   imagePullSecretName: <image-pull-secret>
@@ -16,7 +16,7 @@ authorization:
   serviceAccountName: <service-account-name>
 
 configs:
-  configMap: helm-idle-cleanup-cronjob
+  configMap: norganas-helm-oblivion
   path: /app/src/configs/configs.json
   subPath: configs.json
 
