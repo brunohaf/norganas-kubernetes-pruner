@@ -1,7 +1,7 @@
 <div align="center" style="max-width: 700px; margin: auto;">
 <br>
   <div style="width:80px; height:80px; border-radius:50%; overflow:hidden; border:4px solid #333; margin: 0 auto; display:flex; align-items:center; justify-content:center;">
-    <img src="src/resources/norganas-logo.png" alt="Norganas Helm of Oblivion" style="width:30%; height:30%; object-fit:contain;">
+    <img src="src/resources/norganas-2-logo.png" alt="Norganas Helm of Oblivion" style="width:30%; height:30%; object-fit:contain;">
   </div>
   <h1 style="margin-bottom: 0.5em; font-weight: 700;">
     norganas-kube-prune
