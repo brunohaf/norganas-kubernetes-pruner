@@ -1,7 +1,7 @@
 <div align="center" style="max-width: 700px; margin: auto;">
 <br>
   <div style="width:80px; height:80px; border-radius:50%; overflow:hidden; border:4px solid #333; margin: 0 auto; display:flex; align-items:center; justify-content:center;">
-    <img src="src/resources/norganas-2-logo.png" alt="Norganas Helm of Oblivion" style="width:30%; height:30%; object-fit:contain;">
+    <img src="src/resources/norganas-2-logo.png" alt="Norganas Helm of Oblivion" style="width:100%; height:100%; object-fit:contain;">
   </div>
   <h1 style="margin-bottom: 0.5em; font-weight: 700;">
     norganas-kube-prune
@@ -49,7 +49,7 @@
 - Logs purging events for observability and auditing.  
 - Uses Azure File Share as persistent file server and datalake for logs and release lists.  
 - Supports gathering cluster node capacity and allocation info alongside workload metrics.  
-- Automates idle Helm release cleanup to enhance Kubernetes cluster cost-effectiveness.  
+- Automates idle workload cleanup to enhance Kubernetes cluster cost-effectiveness.  
 
 ## Requirements
 
@@ -59,7 +59,7 @@
 - *Access to Azure File Share for list and log storage  
 - *Azure DevOps Pipelines configured for the Purger process
   
-> <em>*See [Know Limitations](#know-limitations).</em>
+  <small><em>*See [Know Limitations](#know-limitations).</em><small>
 
 ## How To Use
 
