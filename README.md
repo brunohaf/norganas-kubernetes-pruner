@@ -1,7 +1,7 @@
 <div align="center" style="max-width: 700px; margin: auto;">
 <br>
   <div style="width:80px; height:80px; border-radius:50%; overflow:hidden; border:4px solid #333; margin: 0 auto; display:flex; align-items:center; justify-content:center;">
-    <img src="src/resources/norganas-2-logo.png" alt="Norganas Helm of Oblivion" style="width:100%; height:100%; object-fit:contain;">
+    <img src="src/resources/norganas-2-logo.png" alt="Norganas Helm of Oblivion" style="width:35%; height:35%; object-fit:contain;">
   </div>
   <h1 style="margin-bottom: 0.5em; font-weight: 700;">
     norganas-kube-prune
@@ -82,12 +82,14 @@ This solution was originally tailored to address a specific need: purging stale,
 
 These limitations can be addressed through future enhancements, such as adding configurable flags, log forwarding capabilities, richer alerting service integrations, and packaged observability assets (Grafana dashboards, Prometheus rules).
 
-## Related Projects
+## Related
 
-- [KEDA (Kubernetes Event-Driven Autoscaling)](https://keda.sh/) — Inspiration for event-driven, metrics-based automation in Kubernetes.  
-- [Karpenter](https://karpenter.sh/) — Kubernetes cluster autoscaler focusing on workload-driven scaling and efficient resource utilization.  
+- [KEDA (Kubernetes Event-Driven Autoscaling)](https://keda.sh/) — Event-driven autoscaling in Kubernetes.  
+- [Karpenter](https://karpenter.sh/) — Workload-driven Kubernetes cluster Autoscaler.  
 - [Helm](https://helm.sh/) — Kubernetes package manager.  
-- [Prometheus.io](https://prometheus.io/docs/prometheus) — Open source metrics and monitoring for systems and services.
+- [Prometheus.io](https://prometheus.io/docs/prometheus) — Metrics and monitoring for systems and services.
+- [Kubecost](https://github.com/kubecost) —  Real-time cost visibility and insights in Kubernetes.
+- [Kube-Janitor](https://codeberg.org/hjacobs/kube-janitor) — TTL for Kubernetes resources.
 
 ## License
 
