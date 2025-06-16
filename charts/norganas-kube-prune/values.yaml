@@ -1,6 +1,6 @@
 image:
-  fullnameOverride: norganas-helm-oblivion
-  repository: norganas-helm-oblivion
+  fullnameOverride: norganas-kube-prune
+  repository: norganas-kube-prune
   tag: #{Build.BuildId}#
   pullPolicy: IfNotPresent
   imagePullSecretName: <image-pull-secret>
@@ -16,7 +16,7 @@ authorization:
   serviceAccountName: <service-account-name>
 
 configs:
-  configMap: norganas-helm-oblivion
+  configMap: norganas-kube-prune
   path: /app/src/configs/configs.json
   subPath: configs.json
 

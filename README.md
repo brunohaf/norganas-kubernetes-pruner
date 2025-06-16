@@ -1,29 +1,35 @@
-<h1 align="center">
-  <br>
+<div align="center" style="max-width: 700px; margin: auto;">
+<br>
   <div style="width:80px; height:80px; border-radius:50%; overflow:hidden; border:4px solid #333; margin: 0 auto; display:flex; align-items:center; justify-content:center;">
     <img src="src/resources/norganas-logo.png" alt="Norganas Helm of Oblivion" style="width:30%; height:30%; object-fit:contain;">
   </div>
-  Norganas Helm of Oblivion
-  <br>
-</h1>
+  <h1 style="margin-bottom: 0.5em; font-weight: 700;">
+    norganas-kube-prune
+  </h1>
+  
+  <p style="font-size: 1.1rem; line-height: 1.5; margin-top: 0;">
+    A lightweight, battle-tested tool that minimizes resource waste in Kubernetes clusters with minimal setup.  
+    Leveraging Prometheus metrics, it identifies idle APIs and workloads, enabling one-time deployment, easy customization to your environment, and silent reclamation of unused resources — efficiently reducing cloud costs.
+  </p>
 
-<h4 align="center">
-  A Kubernetes CronJob implemented to identify and purge stale deployments or workloads by analyzing ingress metrics from Prometheus over a specified interval to determine if the workload was idle or unused. The application compiled a list of idle workloads and forwarded it to a database or an object storage service for reporting or automated deletion.
-</h4>
+  <p style="font-size: 0.9rem; font-style: italic; color: #555; margin-top: 1.5em; line-height: 1.4;">
+    Named after <strong>Norganas, the Finger of Oblivion</strong>, a mysterious entity imprisoned within the Amber Temple in the <em>Curse of Strahd</em> D&D adventure.  
+    Though open to interpretation, Norganas represents a neutral force trading forgotten memories for new skills. Similarly, this tool silently removes stale Kubernetes workloads, freeing resources for fresh deployments.
+  </p>
 
-<div align="center">
-<em>
-The <strong>Norganas' Helm of Oblivion</strong> channels the cryptic power of Norganas — known as the Finger of Oblivion, one of the dark vestiges imprisoned within a sarcophagus in the Amber Temple of D&D's Curse of Strahd adventure. This tool brings that same silent, inexorable force to Kubernetes: cleansing clusters of forgotten, idle workloads to reclaim resources and reduce waste.
-</em>
+  <blockquote style="border-left: 4px solid #d9534f; padding-left: 1em; color: #d9534f; margin-top: 2em; max-width: 650px; margin-left: auto; margin-right: auto;">
+    Despite its proven effectiveness, norganas-kube-prune is a bare-bones utility that requires careful customization to fit your specific cluster setup and operational needs.  
+   Use at your own discretion.
+  </blockquote>
+
+  <p align="center" style="margin-top: 2em;">
+    <a href="#" style="margin: 0 0.5em;"><img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version"></a>
+    <a href="#" style="margin: 0 0.5em;"><img src="https://img.shields.io/github/license/brunohaf/norganas-kube-prune" alt="License"></a>
+    <a href="#" style="margin: 0 0.5em;"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build"></a>
+  </p>
+
 </div>
 
-<br>
-
-<p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version"></a>
-    <a href="#"><img src="https://img.shields.io/github/license/brunohaf/norganas-helm-oblivion" alt="License"></a>
-  <a href="#"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build"></a>
-</p>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
@@ -35,6 +41,8 @@ The <strong>Norganas' Helm of Oblivion</strong> channels the cryptic power of No
 </p>
 
 ## Key Features
+
+> For safety, norganas’ automatic resource purging was replaced with a reporting mechanism that generates a “to-purge” list. This list can be sent to external repositories—such as an Azure file share in the current implementation—enabling easy integration with notification systems for auditing or contesting, as well as automation pipelines for orchestrating resource deletion.
 
 - Fetches ingress volumetry through Prometheus monitoring (`http_requests_total` metric).  
 - Filters purging scope to releases tagged with labels.  
@@ -55,8 +63,8 @@ The <strong>Norganas' Helm of Oblivion</strong> channels the cryptic power of No
 
 ## How To Use
 
-1. Setup the specifications at [config.json](src/configs/configs.json) and [values.yaml](charts/norganas-helm-oblivion/values.yaml).
-2. Deploy the **norganas-helm-of-oblivion** cronjob in your Kubernetes cluster.  
+1. Setup the specifications at [config.json](src/configs/configs.json) and [values.yaml](charts/norganas-kube-prune/values.yaml).
+2. Deploy the **norganas-kube-prune** cronjob in your Kubernetes cluster.  
 3. Ensure Prometheus is scraping the ingress controller metrics correctly.  
 4. Configure the Azure File Share secrets and access for uploading release lists and logs.  
 5. Setup the Purger Azure Pipeline to consume the file share lists and delete the releases.  

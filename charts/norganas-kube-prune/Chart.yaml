@@ -1,0 +1,5 @@
+apiVersion: v2
+name: norganas-kube-prune
+version: 1.0.0
+appVersion: 1.0.0
+description: A lightweight, Python-based cronjob for pruning inactive Kubernetes deployments to improve cluster hygiene and reduce costs.
